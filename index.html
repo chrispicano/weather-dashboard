@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Weather Dashboard</title>
 </head>
     
 <body>
-    <h1>Weather Dashboard</h1>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+        </div>
+      </nav>
 
     <div class="input">
         <input type="text" class="inputValue" placeholder="Enter a city">
@@ -22,6 +27,52 @@
         <p class="temp"></p>
         <p class="date"></p>
     </div>
+
+    <div id="fiveDay" class="row my-2 py-2">
+        <div class="card col-md-2 mx-auto bg-primary">
+            <h5 class="card-title" id="date0">Card title</h5>
+            <div class="icon"><img id="dIcon0" src="" alt="Weather icon"></div>
+            <ul class="list-group list-group-flush">
+                <li id="temp0"></li>
+                <li id="humidity0"></li>
+            </ul>
+        </div>
+        <div class="card col-md-2 mx-auto bg-primary">
+            <h5 class="card-title" id="date1"></h5>
+            <div class="icon"><img id="dIcon1" src="" alt="Weather icon"></div>
+            <ul class="list-group list-group-flush">
+                <li id="temp1"></li>
+                <li id="humidity1"></li>
+            </ul>
+        </div>
+        <div class="card col-md-2 mx-auto bg-primary">
+            <h5 class="card-title" id="date2"></h5>
+            <div class="icon"><img id="dIcon2" src="" alt="Weather icon"></div>
+            <ul class="list-group list-group-flush">
+                <li id="temp2"></li>
+                <li id="humidity2"></li>
+            </ul>
+        </div>
+        <div class="card col-md-2 mx-auto bg-primary">
+            <h5 class="card-title" id="date3"></h5>
+            <div class="icon"><img id="dIcon3" src="" alt="Weather icon"></div>
+            <ul class="list-group list-group-flush">
+                <li id="temp3"></li>
+                <li id="humidity3"></li>
+            </ul>
+        </div>
+        <div class="card col-md-2 mx-auto bg-primary">
+            <h5 class="card-title" id="date4"></h5>
+            <div class="icon"><img id="dIcon4" src="" alt="Weather icon"></div>
+            <ul class="list-group list-group-flush">
+                <li id="temp4"></li>
+                <li id="humidity4"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
 
     <script src="script.js"></script>
 </body>
