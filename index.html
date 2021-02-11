@@ -4,88 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--Google Fonts Link-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+    <!--Custom CSS-->
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
     <title>Weather Dashboard</title>
 </head>
-    
+
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
-        </div>
-      </nav>
-
-    <div class="input">
-        <input type="text" class="inputValue" placeholder="Enter a city">
-        <input type="submit" value="Submit" class="button">
+    <!--Navbar-->
+    <div class="container-fluid">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    Your Weather Dashboard
+                </a>
+            </div>
+        </nav>
     </div>
 
-    <div class="display">
-        <h1 class="name"></h1>
-        <p class="desc"></p>
-        <p class="temp"></p>
-        <p class="date"></p>
+    <!--City Search Bar/Button-->
+    <div class="container">
+
+        <section class="col-4">
+            <div class="row">
+                <div class="card">
+                    <input type="text" id="city-name" placeholder="City">
+
+                    <button type="button" id="search" class="query_btn btn btn-default btn-sm">Search</button>
+                </div>
+                <div class="card">
+                    <button type="button" id="clear" class="query_btn btn btn-default btn-sm">Clear</button>
+                    <ul class="list-group" id="city-list"></ul>
+                </div>
+            </div>
+        </section>
+        <!--Search Results-->
+        <section class="col-8">
+            <div class="row">
+                <div class="card">
+
+                    <div>
+                        <h2 id="city">City:</h2>
+                    </div>
+                    <br>
+                    <div>
+                        <h2 id="temperature">Temperature:</h2>
+                    </div>
+                    <br>
+                    <div>
+                        <h2 id="humidity">Humidity:</h2>
+                    </div>
+                    <br>
+                    <div>
+                        <h2 id="winds">Winds:</h2>
+                    </div>
+                    <br>
+                    <div>
+                        <h2 id="UV-index">UV-Index:</h2>
+                    </div>
+
+                    <br>
+
+                </div>
+            </div>
+        </section>
+        <br>
+        <!--Five-Day Forecast set into five cards-->
+        <div class="row">
+
+            <div class="col-span-12">
+                <h2>Five-Day Forecast</h2>
+            </div>
+
+        </div>
+
+        <setion class="row row-cols-1 row-cols-md-5">
+
+            <div class="col">
+                <div class="card bg-info">
+                    <div id="day1" class="card body">
+                        <h3 class="card-title">Date </h3>
+                        <p id="day1T">Temp: </p>
+                        <p id="day1H">Humidity: </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card bg-info">
+                    <div id="day2" class="card body">
+                        <h3 class="card-title">Date </h3>
+                        <p id="day2T">Temp: </p>
+                        <p id="day2H">Humidity: </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card bg-info">
+                    <div id="day3" class="card body">
+                        <h3 class="card-title">Date </h3>
+                        <p id="day3T">Temp: </p>
+                        <p id="day3H">Humidity: </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card bg-info">
+                    <div id="day4" class="card body">
+                        <h3 class="card-title">Date </h3>
+                        <p id="day4T">Temp: </p>
+                        <p id="day4H">Humidity: </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card bg-info">
+                    <div id="day5" class="card body">
+                        <h3 class="card-title">Date </h3>
+                        <p id="day5T">Temp: </p>
+                        <p id="day5H">Humidity: </p>
+                    </div>
+                </div>
+            </div>
+
+        </setion>
     </div>
 
-    <div id="fiveDay" class="row my-2 py-2">
-        <div class="card col-md-2 mx-auto bg-primary">
-            <h5 class="card-title" id="date0">Card title</h5>
-            <div class="icon"><img id="dIcon0" src="" alt="Weather icon"></div>
-            <ul class="list-group list-group-flush">
-                <li id="temp0"></li>
-                <li id="humidity0"></li>
-            </ul>
-        </div>
-        <div class="card col-md-2 mx-auto bg-primary">
-            <h5 class="card-title" id="date1"></h5>
-            <div class="icon"><img id="dIcon1" src="" alt="Weather icon"></div>
-            <ul class="list-group list-group-flush">
-                <li id="temp1"></li>
-                <li id="humidity1"></li>
-            </ul>
-        </div>
-        <div class="card col-md-2 mx-auto bg-primary">
-            <h5 class="card-title" id="date2"></h5>
-            <div class="icon"><img id="dIcon2" src="" alt="Weather icon"></div>
-            <ul class="list-group list-group-flush">
-                <li id="temp2"></li>
-                <li id="humidity2"></li>
-            </ul>
-        </div>
-        <div class="card col-md-2 mx-auto bg-primary">
-            <h5 class="card-title" id="date3"></h5>
-            <div class="icon"><img id="dIcon3" src="" alt="Weather icon"></div>
-            <ul class="list-group list-group-flush">
-                <li id="temp3"></li>
-                <li id="humidity3"></li>
-            </ul>
-        </div>
-        <div class="card col-md-2 mx-auto bg-primary">
-            <h5 class="card-title" id="date4"></h5>
-            <div class="icon"><img id="dIcon4" src="" alt="Weather icon"></div>
-            <ul class="list-group list-group-flush">
-                <li id="temp4"></li>
-                <li id="humidity4"></li>
-            </ul>
-        </div>
-    </div>
-</div>
-</div>
-
-
-    <script src="script.js"></script>
 </body>
-
-
-
-
-
-
-
-
-
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="script.js"></script>
 
 </html>

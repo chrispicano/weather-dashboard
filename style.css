@@ -23,3 +23,58 @@ input [type="text"]{
     border: none;
     border-radius: 2px;
 }
+/* remove dot from list */
+ul {
+    list-style-type: none;
+}
+
+/* the following just give a little color to the web application */
+header {
+    background-color: lightyellow !important;
+    align-items: center;
+}
+
+body {
+    font-family: 'Permanent Marker',
+        cursive;       
+}
+
+.morning{
+  background-image: linear-gradient(rgba(0, 0, 175, 0.5), rgba(175, 125, 0, 0.5));
+}
+
+.afternoon{
+    background-image: linear-gradient(rgba(0, 0, 175, 0.5), rgba(200, 200, 0, 0.5));
+}
+
+.dusk{
+background-image: linear-gradient(rgba(0, 0, 175, 0.5), rgba(200, 0, 183, 0.5));
+}
+
+.dark{
+background-image: linear-gradient(rgba(0, 4, 56, 0.486), rgba(23, 2, 58, 0.5));
+}
+
+.jumbotron {
+    background-color: lightblue;   
+}
+
+.low {
+    background-color: green;
+}
+
+.moderate {
+    background-color: yellow;
+}
+
+.high {
+    background-color: orange;
+}
+
+.veryHigh {
+    background-color: red;
+}
+
+.extreme {
+    background-color: purple;
+}
